@@ -1,56 +1,85 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: "Instrument Serif", serif;
+  background-color: #070d0d;
+  color: #f7f3e3;
   text-align: center;
 }
 
 header {
-  padding: 20px;
-  background-color: #222;
-  color: white;
+  padding: 80px;
+  background-color: #070d0d;
+  color: #f7f3e3;
+}
+
+h1 {
+  font-weight: normal;
 }
 
 #bio {
-  margin-top: 10px;
-  font-size: 16px;
-  color: #ccc;
+  font-size: 30px;
+  color: #f7f3e3;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 75px;
+  text-align: left;
+  position:fixed;
+  top:110px;
+}
+
+#name {
+  padding: 0px;
+  font-size: 50px;
+  margin: 0px;
+  line-height: 70%;
+  text-align: left;
+  position:fixed;
 }
 
 #links {
   margin: 20px auto;
+  margin-left: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: 15px;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
 }
 
 a {
   text-decoration: none;
-  color: #0073e6;
+  color: #c7c0b6;
   font-weight: bold;
+  transition: 1s;
 }
 
 a:hover {
-  text-decoration: underline;
+  transition: 1s;
+  color: #a3966a
 }
 
 .project-btn {
   padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  border-color: #c7c0b6;
+  border-width: 1px;
+  border-radius: 3px;
+  background: #070d0d;
   color: white;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: normal;
   margin: 10px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: 1s;
+  font-family: "Instrument Serif", serif;
+  box-shadow: none;
+ border-style: solid;
 }
 
 .project-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  color:#070d0d;
+  background-color: #c7c0b6;
+  transition: 1s;
 }
 
 #viewer-container {
@@ -67,6 +96,7 @@ a:hover {
 #model-container {
   width: 400px;
   height: 400px;
+  align-items: center;
 }
 
 #drawings-container {
@@ -75,6 +105,7 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
+  align-items: center;
 }
 
 #drawings-container img {
@@ -88,10 +119,10 @@ a:hover {
   margin: 20px auto;
   width: 400px;
   font-size: 16px;
-  color: #555;
+  color: #f7f3e3;
   text-align: center;
   padding: 10px;
-  background-color: #f9f9f9;
+  background-color: #070d0d;
   border: 1px solid #ccc;
   border-radius: 5px;
 }

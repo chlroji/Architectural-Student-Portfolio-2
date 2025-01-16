@@ -1,6 +1,6 @@
 export const data = {
-  name: "Chloe Leyao",
-  bio: "Undergraduate Architectural Student at University of Calgary passionate about building tools to make homes more affordable.",
+  name: "CHLOE LEYAO",
+  bio: "Design  Portfolio",
   contact: {
     email: "chloe.leyao@ucalgary.ca",
     phone: "(250) 212-0849",
