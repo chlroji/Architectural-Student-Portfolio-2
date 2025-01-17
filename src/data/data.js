@@ -4,7 +4,7 @@ export const data = {
   contact: {
     email: "chloe.leyao@ucalgary.ca",
     phone: "(250) 212-0849",
-    linkedin: "linkedin.com/in/chloeleyao",
-    github: "https://www.github.com/",
+    linkedin: "https://www.linkedin.com/in/chloe-leyao-6a2b1b257/",
+    github: "https://github.com/chlroji",
   },
 };
