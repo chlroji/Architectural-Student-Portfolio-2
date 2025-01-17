@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  padding: 80px;
+  padding: 50px;
   background-color: #070d0d;
   color: #f7f3e3;
 }
@@ -25,7 +25,7 @@ h1 {
   margin-left: 78px;
   text-align: left;
   position:fixed;
-  top:110px;
+  top:80px;
 }
 
 #name {
@@ -38,16 +38,13 @@ h1 {
 }
 
 #links {
-  margin: 30px auto;
-  margin-left: 30px;
   display: flex;
   justify-content: left;
   gap: 15px;
   position: fixed;
-  bottom: 20px;
-  right: 60px;
+  bottom: 50px;
+  right: 50px;
   font-weight: normal;
-  letter-spacing: .1rem;
   color:#f7f3e3;
 }
 
@@ -64,12 +61,12 @@ a:hover {
 
 .project-btn {
   padding: 10px 20px;
-  border-color: #c7c0b6;
+  margin-top: 400px;
+  border-color: #f7f3e3;
   border-width: 1px;
   border-radius: 3px;
   background: #070d0d;
-  color: white;
-  cursor: pointer;
+  color: #f7f3e3;
   font-size: 20px;
   font-weight: normal;
   margin: 10px;
@@ -78,7 +75,7 @@ a:hover {
   box-shadow: none;
  border-style: solid;
  width: 250px;
- height:150px;
+ height:100px;
  vertical-align: top;
  text-align: center;
 }
@@ -89,9 +86,18 @@ a:hover {
   transition: 1s;
 }
 
+.project-btn:active {
+  color: #a3966a;
+  transition: 0.5s;
+}
+
+#controls {
+margin-top: 25px;
+}
+
 #viewer-container {
   margin: 20px auto;
-  width: 400px;
+  width: auto;
   height: 400px;
   display: flex;
   justify-content: space-between;
@@ -101,7 +107,7 @@ a:hover {
 }
 
 #model-container {
-  width: 400px;
+  width: auto;
   height: 400px;
   align-items: center;
 }
@@ -109,29 +115,37 @@ a:hover {
 #drawings-container {
   margin: 20px auto;
   border-radius: 3px;
-  width: 750px;
+  width: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: auto auto;
   gap: 5px;
+  justify-content: center;
+  justify-items: center;
   align-items: center;
+  align-content: center;
+  transition: opacity 0.5s ease-in-out;
 }
 
 #drawings-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: auto;
+  height: 200px;
   border: 1px solid #ccc;
   border-radius: 3px;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out;
+
+}
+
+#drawings-container img.loaded {
+  opacity: 1;
 }
 
 #description {
-  margin: 20px auto;
-  width: 400px;
+  width: 175px;
   font-size: 16px;
   color: #f7f3e3;
-  text-align: center;
-  padding: 10px;
-  background-color: #070d0d;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  position:fixed;
+  bottom: 50px;
+  left: 50px;
+  text-align: left;
 }

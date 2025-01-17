@@ -26,20 +26,50 @@ function populateModelButtons() {
     const button = document.createElement("button");
     button.className = "project-btn";
     button.textContent = model.label;
-    button.onclick = () => loadModel(model.path, index);
+    button.onclick = () => changePictures(index);
     controls.appendChild(button);
   });
 }
 
-function loadModel(modelPath, index) {
-  const containerSelector = "#model-container";
+function changePictures(index) {
+  const imageSets = [
+    [
+      "cube_drawings/phantasma1.png",
+      "cube_drawings/phantasma2.png",
+    ],
+    [
+      "cube_drawings/iceburg1.png",
+      "cube_drawings/iceburg2.png",
+    ],
+    [
+      "cube_drawings/airdrie1.png",
+      "cube_drawings/airdrie2.png",
+      "cube_drawings/airdrie3.png",
+      "cube_drawings/airdrie4.png",
+    ],
+  ];
 
-  const container = document.querySelector(containerSelector);
-  while (container.firstChild) {
-    container.removeChild(container.firstChild);
-  }
+  const container = document.querySelector("#drawings-container");
 
-  createThreeScene(containerSelector, modelPath);
+  container.style.opacity = "0";
+
+  setTimeout(() => {
+
+    while (container.firstChild) {
+      container.removeChild(container.firstChild);
+    }
+
+    imageSets[index].forEach((src) => {
+      const img = document.createElement("img");
+      img.src = src;
+      
+      img.onload = () => img.classList.add("loaded");
+
+      container.appendChild(img);
+    });
+
+    container.style.opacity = "1";
+  }, 500);
 }
 
 populateModelButtons();
