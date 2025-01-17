@@ -1,6 +1,6 @@
 export const data = {
   name: "CHLOE LEYAO",
-  bio: "Design  Portfolio",
+  bio: "design portfolio",
   contact: {
     email: "chloe.leyao@ucalgary.ca",
     phone: "(250) 212-0849",

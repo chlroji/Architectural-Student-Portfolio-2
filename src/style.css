@@ -4,6 +4,7 @@ body {
   background-color: #070d0d;
   color: #f7f3e3;
   text-align: center;
+  font-weight: normal;
 }
 
 header {
@@ -21,7 +22,7 @@ h1 {
   color: #f7f3e3;
   padding: 0px;
   margin: 0px;
-  margin-left: 75px;
+  margin-left: 78px;
   text-align: left;
   position:fixed;
   top:110px;
@@ -37,20 +38,22 @@ h1 {
 }
 
 #links {
-  margin: 20px auto;
-  margin-left: 20px;
+  margin: 30px auto;
+  margin-left: 30px;
   display: flex;
   justify-content: left;
   gap: 15px;
   position: fixed;
   bottom: 20px;
-  right: 50px;
+  right: 60px;
+  font-weight: normal;
+  letter-spacing: .1rem;
+  color:#f7f3e3;
 }
 
 a {
   text-decoration: none;
-  color: #c7c0b6;
-  font-weight: bold;
+  color: #f7f3e3;
   transition: 1s;
 }
 
@@ -74,6 +77,10 @@ a:hover {
   font-family: "Instrument Serif", serif;
   box-shadow: none;
  border-style: solid;
+ width: 250px;
+ height:150px;
+ vertical-align: top;
+ text-align: center;
 }
 
 .project-btn:hover {
@@ -101,7 +108,8 @@ a:hover {
 
 #drawings-container {
   margin: 20px auto;
-  width: 400px;
+  border-radius: 3px;
+  width: 750px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
@@ -113,6 +121,7 @@ a:hover {
   height: 100%;
   object-fit: cover;
   border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 #description {
