@@ -17,6 +17,10 @@ h1 {
   font-weight: normal;
 }
 
+#lol {
+  bottom: -200px;
+}
+
 #bio {
   font-size: 30px;
   color: #f7f3e3;
@@ -92,7 +96,7 @@ a:hover {
 }
 
 #controls {
-margin-top: 25px;
+margin-top: 90px;
 }
 
 #viewer-container {
@@ -116,8 +120,7 @@ margin-top: 25px;
   margin: 20px auto;
   border-radius: 3px;
   width: auto;
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
   gap: 5px;
   justify-content: center;
   justify-items: center;
