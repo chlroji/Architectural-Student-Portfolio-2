@@ -55,34 +55,27 @@ function changePictures(index) {
 
   const container = document.querySelector("#drawings-container");
 
-  // Fade out the container for the transition effect
   container.style.opacity = "0";
 
   setTimeout(() => {
-    // Remove all existing children
     while (container.firstChild) {
       container.removeChild(container.firstChild);
     }
 
-    // Add new images wrapped in anchor tags
     imageSets[index].forEach((src) => {
-      // Create an anchor element
       const anchor = document.createElement("a");
-      anchor.href = src; // Set the link to the image source
-      anchor.target = "_blank"; // Open the image in a new tab
-      anchor.rel = "noopener noreferrer"; // Security best practices
+      anchor.href = src;
+      anchor.target = "_blank";
+      anchor.rel = "noopener noreferrer";
 
-      // Create the image element
       const img = document.createElement("img");
-      img.src = src; // Set the image source
+      img.src = src;
       img.onload = () => img.classList.add("loaded");
 
-      // Append the image to the anchor and the anchor to the container
       anchor.appendChild(img);
       container.appendChild(anchor);
     });
 
-    // Fade in the container after adding new images
     container.style.opacity = "1";
   }, 500);
 }

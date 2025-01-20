@@ -127,6 +127,7 @@ margin-top: 90px;
   align-items: center;
   align-content: center;
   transition: opacity 0.5s ease-in-out;
+  text-align: center;
 }
 
 #drawings-container img {
@@ -151,4 +152,13 @@ margin-top: 90px;
   bottom: 50px;
   left: 50px;
   text-align: left;
+}
+
+.group-description {
+  border-radius: 3px;
+  width: auto;
+  justify-items: center;
+  align-content: center;
+  transition: opacity 0.5s ease-in-out;
+  margin-top: 20px;
 }
