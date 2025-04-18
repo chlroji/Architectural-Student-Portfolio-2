@@ -6,7 +6,7 @@ export function createThreeScene(containerSelector, objPath) {
   const container = document.querySelector(containerSelector);
 
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xd3d3d3);
+  scene.background = new THREE.Color(0x070d0d);
 
   const camera = new THREE.PerspectiveCamera(
     75,
@@ -20,14 +20,14 @@ export function createThreeScene(containerSelector, objPath) {
   renderer.setSize(container.clientWidth, container.clientHeight);
   container.appendChild(renderer.domElement);
 
-  const gridHelper = new THREE.GridHelper(10, 10, 0x000000, 0x808080);
+  const gridHelper = new THREE.GridHelper(10, 10, 0xffffff, 0xffffff);
   scene.add(gridHelper);
 
   const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
   directionalLight.position.set(5, 5, 5);
   scene.add(directionalLight);
 
-  const ambientLight = new THREE.AmbientLight(0x404040, 1);
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1);
   scene.add(ambientLight);
 
   const pointLight = new THREE.PointLight(0xffffff, 0.8, 100);
@@ -49,7 +49,7 @@ export function createThreeScene(containerSelector, objPath) {
         if (child.isMesh) {
           child.geometry.computeVertexNormals();
           child.material = new THREE.MeshStandardMaterial({
-            color: 0xaaaaaa,
+            color: 0xffffff,
             wireframe: false,
             transparent: true,
           });
