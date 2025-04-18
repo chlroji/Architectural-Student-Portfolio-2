@@ -111,9 +111,12 @@ margin-top: 90px;
 }
 
 #model-container {
-  width: auto;
-  height: 400px;
+  width: 400px;
+  height: 200px;
   align-items: center;
+  position: relative;
+  left: 550px;
+  transition: opacity 0.5s ease-in-out;
 }
 
 #drawings-container {
@@ -161,4 +164,17 @@ margin-top: 90px;
   align-content: center;
   transition: opacity 0.5s ease-in-out;
   margin-top: 20px;
+}
+
+.description-box {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  max-width: 800px;
+  left: 325px;
+  position: absolute;
 }

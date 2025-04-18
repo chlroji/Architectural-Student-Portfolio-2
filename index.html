@@ -5,26 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>chloeleyao</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/style.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicon_io/newfavicon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon_io/newfavicon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon_io/newfavicon.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/newfavicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/newfavicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/newfavicon.png" />
     <link rel="manifest" href="/favicon_io/site.webmanifest" />
   </head>
   <body>
@@ -33,19 +19,27 @@
       <p id="bio"></p>
     </header>
 
+    <!-- Model selection buttons will appear here -->
     <div id="controls"></div>
-    <div id="drawings-container">
-    </div>
+    
+    <!-- Container for project images -->
+    <div id="drawings-container"></div>
 
-
-    <div id="description">Bachelor's of Design in
-      City Innovation student at
-      UCalgary's School of Architecture,
-      Planning and Landscape,
-      passionate in creating sustainable,
-      equitable, and vibrant communities.
+    <!-- Container for 3D model rendering -->
+    <div id="model-container"></div>
+    
+    <!-- Static description -->
+    <div id="description">
+      Bachelor's of Design in City Innovation student at 
+      UCalgary's School of Architecture, Planning and Landscape, 
+      passionate in creating sustainable, equitable, and vibrant communities.
     </div>
-      <div id="links"></div>
+    
+    <!-- Contact links will appear here -->
+    <div id="links"></div>
+    
+    <!-- Dynamic project description box -->
+    <div id="description-box" class="description-box"></div>
 
     <script type="module" src="./src/main.js"></script>
   </body>
