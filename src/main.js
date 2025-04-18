@@ -25,7 +25,7 @@ function populateModelButtons() {
       images: ["cube_drawings/game1.png", "cube_drawings/game2.png", "cube_drawings/game3.png", "cube_drawings/game4.png"]
     },
     { 
-      path: "", 
+      path: "3d_models/project4/a4model.obj",
       label: "PLACEMAKING", 
       description: "We wanted to create a pavilion that reflects the two different identities and navigating them as an outsider. Upon first glance the pavilion is larger than life, flaunting an intricate and colorful facade. However, it is only when the observer comes in close and navigates through the pavilion’s corridors when they finally see the inner monument The secret garden and fountain represents the inner world we nurture and protect, a space of authenticity, emotion, and growth. The contrast between the protective “shell” and the organic, flourishing interior encourages obseervers to reflect on the identities we present to the world and our deeper selves, and their role as an outsider to be stewards in these vulnerable spaces.",
       images: ["cube_drawings/pavilion1.png", "cube_drawings/pavilion2.png", "cube_drawings/pavilion3.png", "cube_drawings/pavilion4.png"]
