@@ -120,12 +120,13 @@ margin-top: 200px;
 }
 
 #model-container {
-  width: 400px;
+  width: 500px;
   height: 200px;
   align-items: center;
   position: relative;
-  left: 550px;
-  transition: opacity 0.5s ease-in-out;
+  left: 500px;
+  transition: opacity 0.5s ease;
+  opacity: 1;
 }
 
 #drawings-container {

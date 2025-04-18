@@ -96,8 +96,20 @@ function updateGallery(images, description) {
 
 function loadModel(modelPath) {
   const container = document.querySelector("#model-container");
-  container.innerHTML = ""; // Clear previous model
-  createThreeScene("#model-container", modelPath); // Ensure this matches your threeScene.js setup
+
+  // Fade out
+  container.style.opacity = "0";
+
+  setTimeout(() => {
+    // Clear old model and load new one
+    container.innerHTML = "";
+    createThreeScene("#model-container", modelPath);
+
+    // Fade back in
+    requestAnimationFrame(() => {
+      container.style.opacity = "1";
+    });
+  }, 500);
 }
 
 // Initialize
