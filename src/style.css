@@ -74,7 +74,7 @@ a:hover {
 
 .project-btn {
   padding: 10px 20px;
-  margin-top: 400px;
+  margin-top: 200px;
   border-color: #f7f3e3;
   border-width: 1px;
   border-radius: 3px;
@@ -105,7 +105,7 @@ a:hover {
 }
 
 #controls {
-margin-top: 200px;
+margin-top: 150px;
 }
 
 #viewer-container {
@@ -120,11 +120,11 @@ margin-top: 200px;
 }
 
 #model-container {
-  width: 500px;
+  width: 800px;
   height: 200px;
   align-items: center;
   position: relative;
-  left: 500px;
+  left: 350px;
   transition: opacity 1s ease;
   opacity: 1;
   display: block;
@@ -188,5 +188,5 @@ margin-top: 200px;
   max-width: 800px;
   left: 325px;
   position: absolute;
-  padding-bottom: 250px;
+  padding-bottom: 200px;
 }

@@ -9,12 +9,12 @@ export function createThreeScene(containerSelector, objPath) {
   scene.background = new THREE.Color(0x070d0d);
 
   const camera = new THREE.PerspectiveCamera(
-    75,
+    50,
     container.clientWidth / container.clientHeight,
-    0.1,
+    0.01,
     1000
   );
-  camera.position.set(2, 2, 5);
+  camera.position.set(0, 7, 0);
 
   const renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setSize(container.clientWidth, container.clientHeight);
