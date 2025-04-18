@@ -44,6 +44,7 @@ function populateModelButtons() {
     },
     { 
       label: "CADAVRE EXQUIS", 
+      noModel: true,
       description: "THE FORTRESS I BUILD is an exploration into the self built for others and its separation from the true self. The identity built for others - interests, appearance, how to act - is carefully curated to fit with societal norms, to build relationships, without flaws or vulnerability. The self behind this fortress is never shown to the world; free from judging eyes. For everyone it is different how much they show their raw, authentic selves, or how much they leave them behind closed doors. This exquisite corpse was created with a RISO print style: an amalgamation of elements overlapping, surrounding and protecting the true self from the outside world. This exquisite corpse became a self-portrait that explores my true self - how much of my identity is influenced by current trends? What does it take to take down the fortress and be vulnerable to the world?",
       images: ["cube_drawings/corpse.png", "cube_drawings/corpse2.png", "cube_drawings/corpse3.png"]
     }
@@ -57,8 +58,14 @@ function populateModelButtons() {
     button.textContent = model.label;
     
     button.onclick = () => {
-      loadModel(model.path); // Load 3D model
-      updateGallery(model.images, model.description); // Update images & description
+      if (!model.noModel) {
+        showModelContainer(true);
+        loadModel(model.path);
+      } else {
+        showModelContainer(false);
+      }
+    
+      updateGallery(model.images, model.description);
     };
     
     controls.appendChild(button);
@@ -97,20 +104,43 @@ function updateGallery(images, description) {
 function loadModel(modelPath) {
   const container = document.querySelector("#model-container");
 
-  // Fade out
   container.style.opacity = "0";
 
   setTimeout(() => {
-    // Clear old model and load new one
     container.innerHTML = "";
     createThreeScene("#model-container", modelPath);
-
-    // Fade back in
-    requestAnimationFrame(() => {
-      container.style.opacity = "1";
-    });
+    
+    // Fade back in only if it's not hidden (ensure it's visible first)
+    if (container.style.display !== "none") {
+      requestAnimationFrame(() => {
+        container.style.opacity = "1";
+      });
+    }
   }, 500);
 }
 
+function showModelContainer(visible) {
+  const container = document.querySelector("#model-container");
+
+  if (visible) {
+    // Set display first and force a reflow before fading in
+    container.style.display = "block";
+    container.style.opacity = "0";
+
+    // Force reflow to ensure transition triggers
+    void container.offsetHeight;
+
+    container.style.transition = "opacity 0.5s ease";
+    container.style.opacity = "1";
+  } else {
+    container.style.transition = "opacity 0.5s ease";
+    container.style.opacity = "0";
+
+    // Hide after fade-out
+    setTimeout(() => {
+      container.style.display = "none";
+    }, 500);
+  }
+}
 // Initialize
 populateModelButtons();
