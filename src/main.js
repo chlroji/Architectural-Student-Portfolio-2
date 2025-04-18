@@ -19,7 +19,7 @@ Object.keys(data.contact).forEach((key) => {
 function populateModelButtons() {
   const modelPaths = [
     { 
-      path: "", 
+      path: "3d_models/project5/a5model.obj",
       label: "GAME ENGINES", 
       description: "The overall design of the gallery was to evoke a sense of ethereal holiness, using scale and gothic-futuristic elements like cybersigilism into the space. The original studio design was from a concept of religion and cult-like beliefs, so I wanted the space to reflect that tone.",
       images: ["cube_drawings/game1.png", "cube_drawings/game2.png", "cube_drawings/game3.png", "cube_drawings/game4.png"]

@@ -20,7 +20,7 @@ export function createThreeScene(containerSelector, objPath) {
   renderer.setSize(container.clientWidth, container.clientHeight);
   container.appendChild(renderer.domElement);
 
-  const gridHelper = new THREE.GridHelper(5, 5, 0xffffff, 0xffffff);
+  const gridHelper = new THREE.GridHelper(5, 5, 0x3b3b3b, 0x3b3b3b);
   scene.add(gridHelper);
 
   const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
